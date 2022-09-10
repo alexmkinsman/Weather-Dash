@@ -22,8 +22,38 @@
   <title>Weather Dashboard</title>
 </head>
 <body>
-  <header>
+  <header class="container-fluid text-center p-2">
     <h1>Weather Dashboard</h1>
   </header>
+
+  <div class="col-md-3 pb-3">
+    <h2>Search for your favorite city:</h2>
+    <form id="searchForm" class="form">
+      <div class="form-inline form-group">
+        <div class="input-group">
+          <input
+            class="form-input weather-search"
+            type="text"
+            id="search-input"
+            placeholder="Nampa, Idaho"
+            aria-labelledby="form-heading"
+            aria-controls="today forecast"
+          />
+          <div class="input-group-append">
+            <button
+              type="submit"
+              class="btn search-button"
+              id="search-button"
+              aria-label="submit search"
+            >
+              Search
+            </button>
+            <hr class="hr weather-hr" />
+          </div>
+        </div>
+      </div>
+    </form>
+    <div class="list-group" id="pastSearch"></div>
+  </div>
 </body>
 </html>
